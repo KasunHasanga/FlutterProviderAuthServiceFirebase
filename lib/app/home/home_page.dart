@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:firebase_user_avatar_flutter/app/home/about_page.dart';
 import 'package:firebase_user_avatar_flutter/common_widgets/avatar.dart';
 import 'package:firebase_user_avatar_flutter/models/avatar_reference.dart';
