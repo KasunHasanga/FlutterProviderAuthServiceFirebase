@@ -31,14 +31,10 @@ class AboutPage extends StatelessWidget {
             ),
             SizedBox(height: 32),
             Text(
-              'by Andrea Bizzotto',
+              'Kasun Hasanga',
               style: Theme.of(context).textTheme.title,
             ),
-            SizedBox(height: 32),
-            Text(
-              'codingwithflutter.com',
-              style: Theme.of(context).textTheme.title,
-            ),
+
           ],
         ),
       ),
@@ -46,10 +42,9 @@ class AboutPage extends StatelessWidget {
   }
 
   Widget _buildUserInfo({BuildContext context}) {
-    final user = Provider.of<User>(context);
     final database = Provider.of<FirestoreService>(context);
     return StreamBuilder<AvatarReference>(
-      stream: database.avatarReferenceStream(uid: user.uid),
+      stream: database.avatarReferenceStream(),
       builder: (context, snapshot) {
         final avatarReference = snapshot.data;
         return Avatar(
